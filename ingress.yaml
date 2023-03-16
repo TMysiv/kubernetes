@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kub-ingress
+spec:
+  rules:
+    - host: 172.21.251.194
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: kub-service
+                port:
+                  number: 80

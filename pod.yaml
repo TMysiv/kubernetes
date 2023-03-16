@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kub
+spec:
+  containers:
+    - name: kub
+      image: nightvvolf/kub:latest
+      ports:
+        - containerPort: 80
